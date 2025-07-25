@@ -1,182 +1,211 @@
 .background {
-    background-color: #ecfae5;
-    min-height: 100vh;
+  background-color: #ecfae5;
+  min-height: 100vh;
 }
 .todo-header {
-    padding: 35px 70px 18px 70px; /* 위-오른쪽-아래-왼쪽 */
+  padding: 35px 70px 18px 70px; /* 위-오른쪽-아래-왼쪽 */
 }
 
 .todo-title {
-    font-size: 2.8rem;
-    font-weight: 600;
-    letter-spacing: 1.2px;
-    margin-bottom: 10px;
+  font-size: 2.8rem;
+  font-weight: 600;
+  letter-spacing: 1.2px;
+  margin-bottom: 10px;
 }
 
 .todo-header-underline {
-    border-bottom: 2px solid black;
-    height: 1px;
+  border-bottom: 2px solid black;
+  height: 1px;
 }
 .todo-header-row {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .add-button {
-    width: 48px;
-    height: 48px;
-    background: #cae8bd;
-    border-radius: 10px;
-    font-size: 2rem;
-    font-weight: 500;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    cursor: pointer;
-    user-select: none;
+  width: 48px;
+  height: 48px;
+  background: #cae8bd;
+  border-radius: 10px;
+  font-size: 2rem;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  user-select: none;
 }
 .add-button:hover {
-    background: #b0db9c;
+  background: #b0db9c;
 }
 
 .todo-list-row {
-    display: flex;
-    margin-left: 70px;
-    margin-top: 30px;
-    gap: 32px; /* 블록 사이 여백 */
+  display: flex;
+  margin-left: 70px;
+  margin-top: 30px;
+  gap: 32px; /* 블록 사이 여백 */
 }
 
 .todo-list-block {
-    background: #cae8bd;
-    border-radius: 16px;
-    padding: 32px 32px 24px 32px;
-    width: 280px;
-    text-align: center;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+  background: #cae8bd;
+  border-radius: 16px;
+  padding: 32px 32px 24px 32px;
+  width: 280px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .todo-list-text {
-    font-size: 1.2rem;
-    margin-bottom: 18px;
-    font-weight: 500;
+  font-size: 1.2rem;
+  margin-bottom: 18px;
+  font-weight: 500;
 }
 .todo-list-time {
-    font-size: 1.1rem;
-    margin-bottom: 20px;
-    color: #495a41;
+  font-size: 1.1rem;
+  margin-bottom: 20px;
+  color: #495a41;
 }
 .todo-list-done-btn {
-    background: #ecfae5;
-    border: none;
-    border-radius: 8px;
-    font-size: 1.1rem;
-    padding: 8px 20px;
-    cursor: pointer;
+  background: #ecfae5;
+  border: none;
+  border-radius: 8px;
+  font-size: 1.1rem;
+  padding: 8px 20px;
+  cursor: pointer;
 }
 .todo-list-done-btn:hover {
-    background: white;
+  background: white;
 }
 .add-modal-overlay {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100vw;
-    height: 100vh;
-    background: rgba(34, 34, 34, 0.22); /* 반투명 블랙 */
-    z-index: 999; /* 가장 위로 */
-    display: flex;
-    align-items: center;
-    justify-content: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(34, 34, 34, 0.22); /* 반투명 블랙 */
+  z-index: 999; /* 가장 위로 */
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 .add-modal {
-    background: #fff;
-    border-radius: 16px;
-    padding: 40px 32px 32px 32px;
-    box-shadow: 0 6px 32px rgba(20, 30, 70, 0.12);
-    min-width: 150px;
-    min-height: 200px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 24px;
+  background: #fff;
+  border-radius: 16px;
+  padding: 40px 32px 32px 32px;
+  box-shadow: 0 6px 32px rgba(20, 30, 70, 0.12);
+  min-width: 150px;
+  min-height: 200px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 24px;
 }
 
 .add-modal-row {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 100%;
-    margin-bottom: 6px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  margin-bottom: 6px;
 }
 .add-modal button {
-    padding: 10px 25px;
-    font-size: 1.1rem;
-    border: none;
-    border-radius: 10px;
-    background: #ecfae5;
-    color: black;
-    font-weight: 700;
-    margin-right: 10px;
-    margin-left: 10px;
-    cursor: pointer;
+  padding: 10px 25px;
+  font-size: 1.1rem;
+  border: none;
+  border-radius: 10px;
+  background: #ecfae5;
+  color: black;
+  font-weight: 700;
+  margin-right: 10px;
+  margin-left: 10px;
+  cursor: pointer;
 }
 
 .add-modal button:hover {
-    background: #cae8bd;
+  background: #cae8bd;
 }
 #add-text-input {
-    padding: 10px;
-    margin: 10px 20px 10px 20px;
-    border: 2px solid #cae8bd;
-    border-radius: 10px;
-    font-size: 1.3rem;
-    width: 360px;
-    height: 150px;
+  padding: 10px;
+  margin: 10px 20px 10px 20px;
+  border: 2px solid #cae8bd;
+  border-radius: 10px;
+  font-size: 1.3rem;
+  width: 360px;
+  height: 150px;
 }
 .add-modal input[type="text"] {
-    /* 위 오른쪽 아래 왼쪽 */
-    margin: 5px 10px 15px 10px;
-    padding: 8px 12px 8px 12px;
-    border: 2px solid #cae8bd;
-    border-radius: 10px;
-    font-size: 1rem;
-    width: 150px;
+  /* 위 오른쪽 아래 왼쪽 */
+  margin: 5px 10px 15px 10px;
+  padding: 8px 12px 8px 12px;
+  border: 2px solid #cae8bd;
+  border-radius: 10px;
+  font-size: 1rem;
+  width: 150px;
 }
 #edit-text-input {
-    padding: 10px;
-    margin: 10px 20px 10px 20px;
-    border: 2px solid #cae8bd;
-    border-radius: 10px;
-    font-size: 1.3rem;
-    width: 360px;
-    height: 100px;
+  padding: 10px;
+  margin: 10px 20px 10px 20px;
+  border: 2px solid #cae8bd;
+  border-radius: 10px;
+  font-size: 1.3rem;
+  width: 360px;
+  height: 100px;
 }
 .pot-water-button {
-    position: absolute;
-    top: 430px;
-    left: 47%;
-    padding: 12px 30px;
-    border-radius: 10px;
-    background: #cae8bd;
-    color: #40493b;
-    border: none;
-    font-weight: bold;
-    font-size: 1.1rem;
-    opacity: 0.8;
+  position: absolute;
+  top: 430px;
+  left: 47%;
+  padding: 12px 30px;
+  border-radius: 10px;
+  background: #cae8bd;
+  color: #40493b;
+  border: none;
+  font-weight: bold;
+  font-size: 1.1rem;
+  opacity: 0.8;
 }
 .pot-water-button:disabled {
-    /* 비활성(물주기 완료)*/
-    background: white;
-    opacity: 0.5;
+  /* 비활성(물주기 완료)*/
+  background: white;
+  opacity: 0.5;
 }
+
 .basic-text {
-    text-align: center;
-    color: #888;
-    margin-top: 40px;
-    font-size: 1.8rem;
-    font-weight: 500;
-    padding-top: 50px;
+  text-align: center;
+  color: #888;
+  margin-top: 40px;
+  font-size: 1.8rem;
+  font-weight: 500;
+  padding-top: 50px;
+}
+.login-area {
+  position: absolute;
+  display: flex;
+  right: 60px;
+  align-items: center;
+}
+
+.login-btn {
+  padding: 7px 18px;
+  border: none;
+  background: #f3f3f7;
+  color: #222;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.login-btn:hover {
+  background: #e1ffd9;
+}
+
+.user-info {
+  color: #222;
+  font-weight: 600;
+  border-radius: 8px;
+  padding: 7px 18px;
+  font-size: 1rem;
 }
