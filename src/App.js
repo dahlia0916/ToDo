@@ -21,6 +21,7 @@ import {
   setDoc,
   getDoc,
 } from "firebase/firestore";
+import FinishHeader from "./TodoList/FinishHeader";
 function App() {
   const [todoList, setTodoList] = useState([]);
   const [showAddModal, setShowAddModal] = useState(false);
@@ -29,6 +30,7 @@ function App() {
   const [user, setUser] = useState(null);
   const [lastWatered, setLastWatered] = useState(null);
   const [waterCount, setWaterCount] = useState(0);
+  const [showFinishedPage, setShowFinishedPage] = useState(false);
 
   const savePotStatus = async (uid, lastWatered, waterCount) => {
     const potRef = doc(db, "users", uid, "potStatus", "main");
@@ -106,7 +108,7 @@ function App() {
   const deleteTodoFromFirestore = async (uid, todoId) => {
     const todoRef = doc(db, "users", uid, "todos", todoId);
     await deleteDoc(todoRef);
-  };
+  }; //삭제
   const handleDeleteTodo = async (id) => {
     if (!user) return;
     await deleteTodoFromFirestore(user.uid, id);
@@ -166,7 +168,23 @@ function App() {
         )}
       </div>
       <TodoHeader onAddClick={() => setShowAddModal(true)}></TodoHeader>
-      {activeTodoCount === 0 ? (
+      {showFinishedPage ? ( //완료된 페이지
+        <div>
+          <TodoListRow
+            todoList={todoList}
+            onMenuClick={handleMenuClick}
+            onFinishClick={handleFinishTodo}
+            isFinished={false}
+          ></TodoListRow>
+          <FinishHeader></FinishHeader>
+          <TodoListRow
+            todoList={todoList}
+            onMenuClick={handleMenuClick}
+            onFinishClick={handleFinishTodo}
+            isFinished={true}
+          />
+        </div>
+      ) : activeTodoCount === 0 ? ( //할일 없을때
         <div>
           <div className="basic-text">+ 버튼을 눌러 할 일을 추가해보세요!</div>
           <GrowPot
@@ -176,11 +194,13 @@ function App() {
           />
         </div>
       ) : (
+        //기본 페이지
         <div>
           <TodoListRow
             todoList={todoList}
             onMenuClick={handleMenuClick}
             onFinishClick={handleFinishTodo}
+            isFinished={false}
           ></TodoListRow>
           <GrowPot
             lastWatered={lastWatered}
@@ -202,6 +222,27 @@ function App() {
           onDelete={handleDeleteTodo}
           onClose={() => setEditTarget(null)}
         />
+      )}
+      {showFinishedPage ? (
+        <img
+          src="/home.png"
+          onClick={() => setShowFinishedPage(!showFinishedPage)}
+          style={{
+            width: "3%",
+            height: "3%",
+            marginLeft: "94%",
+          }}
+        ></img>
+      ) : (
+        <img
+          src="/finish.png"
+          onClick={() => setShowFinishedPage(!showFinishedPage)}
+          style={{
+            width: "3%",
+            height: "3%",
+            marginLeft: "94%",
+          }}
+        ></img>
       )}
     </div>
   );

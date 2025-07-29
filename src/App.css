@@ -1,3 +1,5 @@
+@import "~slick-carousel/slick/slick.css";
+@import "~slick-carousel/slick/slick-theme.css";
 .background {
   background-color: #ecfae5;
   min-height: 100vh;
@@ -11,6 +13,13 @@
   font-weight: 600;
   letter-spacing: 1.2px;
   margin-bottom: 10px;
+}
+.finish-title {
+  font-size: 2.3rem;
+  font-weight: 600;
+  letter-spacing: 1.2px;
+  margin-bottom: 10px;
+  margin-top: 60px;
 }
 
 .todo-header-underline {
@@ -42,7 +51,7 @@
 
 .todo-list-row {
   display: flex;
-  margin-left: 70px;
+  margin-left: 80px;
   margin-top: 30px;
   gap: 32px; /* 블록 사이 여백 */
 }
@@ -51,7 +60,8 @@
   background: #cae8bd;
   border-radius: 16px;
   padding: 32px 32px 24px 32px;
-  width: 280px;
+  width: 300px;
+  height: 180px;
   text-align: center;
   display: flex;
   flex-direction: column;
@@ -62,6 +72,21 @@
   font-size: 1.2rem;
   margin-bottom: 18px;
   font-weight: 500;
+  margin-top: 10px;
+}
+.finish-list-text {
+  font-size: 1.2rem;
+  margin-bottom: 18px;
+  font-weight: 500;
+  margin-top: 30px;
+}
+.finish-list-time {
+  font-size: 1.1rem;
+  margin-bottom: 10px;
+  color: #495a41;
+  margin-top: 20px;
+  margin-left: 10px;
+  margin-right: 10px;
 }
 .todo-list-time {
   font-size: 1.1rem;
@@ -75,6 +100,7 @@
   font-size: 1.1rem;
   padding: 8px 20px;
   cursor: pointer;
+  margin-top: 10px;
 }
 .todo-list-done-btn:hover {
   background: white;
@@ -208,4 +234,8 @@
   border-radius: 8px;
   padding: 7px 18px;
   font-size: 1rem;
+}
+.slick-dots {
+  bottom: -50px;
+  left: -60px;
 }
