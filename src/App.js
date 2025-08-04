@@ -159,6 +159,10 @@ function App() {
       <div className="login-area">
         {!user ? (
           <button onClick={handleGoogleSign} className="login-btn">
+            <img
+              src="./google.png"
+              style={{ weight: "18px", height: "18px", paddingRight: "8px" }}
+            ></img>
             Login with Google
           </button>
         ) : (

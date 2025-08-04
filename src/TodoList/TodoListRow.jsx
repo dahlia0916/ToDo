@@ -17,7 +17,7 @@ export default function TodoListRow({
     speed: 500,
     slidesToShow: 3,
     slidesToScroll: 1,
-    arrows: true,
+    arrows: false,
   };
 
   if (filteredTodos.length >= 4) {
